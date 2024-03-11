@@ -23,14 +23,30 @@
 
 <body>
     <div>
-        <a href="index.php?page=start">Start</a> |
-        <a href="index.php?page=contacts">Kontakte</a> |
-        <a href="index.php?page=projects">Projekte</a> |
-        <a href="index.php?page=timer">Countdown</a> |
-        <a href="index.php?page=legal">Impressum</a>
-    </div>
+    <a href="index.php?page=start">Start</a> |
+    <a href="index.php?page=contacts">Kontakte</a> |
+    <a href="index.php?page=projects">Projekte</a> |
+    <a href="index.php?page=timer">Countdown</a> |
+    <a href="index.php?page=legal">Impressum</a> |
+    <a href="index.php?page=gaestebuch">Gästebuch</a>
+	</div>
+
 
     <?php
+	
+	require_once '../Private/dbconfig.php'; // Pfad zur dbconfig.php
+
+	// Erstellen der Datenbankverbindung
+	$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+
+	// Überprüfen der Verbindung
+	if ($conn->connect_error) 
+	{
+    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+	}
+
+	echo "Verbindung erfolgreich hergestellt";
+
     date_default_timezone_set('Europe/Berlin');
     $aktuelleZeitzone = date_default_timezone_get();
 
@@ -88,6 +104,9 @@
             $headline = 'Impressum';
             $output = '<p>Hier siehst du das <b>Impressum</b></p>';
             break;
+		case 'gaestebuch':
+			require 'gaestebuch.php';
+			break;	
         default:
             echo '<h1 style="font-size: 36px; font-weight: bold;">' . $headline . ' Hallöchen und ' . grussbotschaft($stundeUTC1, 'de') . '</h1>';
             break;
