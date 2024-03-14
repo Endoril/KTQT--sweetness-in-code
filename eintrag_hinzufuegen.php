@@ -1,13 +1,22 @@
 <?php
 // Stellen Sie sicher, dass die Verbindungsinformationen zur Datenbank korrekt sind
-require_once 'dbconfig.php'; // Pfad zur Datenbankkonfigurationsdatei anpassen
+require_once '../Private/dbconfig.php'; // Pfad zur Datenbankkonfigurationsdatei anpassen
 
 // Überprüfen, ob das Formular abgesendet wurde
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sicherstellen, dass die benötigten POST-Variablen existieren
     if(isset($_POST['name']) && isset($_POST['nachricht'])) {
-        $name = $_POST['name'];
-        $nachricht = $_POST['nachricht'];
+        // Erstellen der Datenbankverbindung
+        $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+
+        // Überprüfen der Verbindung
+        if ($conn->connect_error) {
+            die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+        }
+
+        // Eingaben bereinigen
+        $name = trim($_POST['name']);
+        $nachricht = trim($_POST['nachricht']);
 
         // SQL-Statement vorbereiten, um SQL-Injection zu verhindern
         $stmt = $conn->prepare("INSERT INTO gaestebuch (name, nachricht) VALUES (?, ?)");
@@ -15,14 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Versuchen, den Eintrag in die Datenbank einzufügen
         if ($stmt->execute()) {
-            echo "Eintrag erfolgreich hinzugefügt.";
+            $stmt->close();
+            $conn->close();
+            // Weiterleitung nur, wenn der Eintrag erfolgreich war
+            header('Location: index.php?page=gaestebuch'); // Pfad anpassen, falls nötig
+            exit; // Beenden der Skriptausführung nach der Weiterleitung
         } else {
             echo "Fehler beim Hinzufügen des Eintrags: " . $stmt->error;
+            $stmt->close();
+            $conn->close();
         }
 
-        // Ressourcen freigeben und Verbindung schließen
-        $stmt->close();
-        $conn->close();
     } else {
         echo "Name und Nachricht sind erforderlich.";
     }

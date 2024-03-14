@@ -45,7 +45,7 @@
     die("Verbindung fehlgeschlagen: " . $conn->connect_error);
 	}
 
-	echo "Verbindung erfolgreich hergestellt";
+	//echo "Verbindung erfolgreich hergestellt";
 
     date_default_timezone_set('Europe/Berlin');
     $aktuelleZeitzone = date_default_timezone_get();
