@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum</title>
-    <link rel="stylesheet" href="css/style.css">	
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
 </head>
 <body>
+
+<?php include 'navi.php'; ?>
 
 <?php
 	echo '<div class="welcome-section" style="text-align: center; margin-top: 200px;">'; 

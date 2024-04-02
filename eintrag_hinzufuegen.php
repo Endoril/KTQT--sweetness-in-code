@@ -1,9 +1,9 @@
 <?php
-// Stellen Sie sicher, dass die Verbindungsinformationen zur Datenbank korrekt sind
-require_once '../Private/dbconfig.php'; // Pfad zur Datenbankkonfigurationsdatei anpassen
+	// Stellen Sie sicher, dass die Verbindungsinformationen zur Datenbank korrekt sind
+	require_once '../Private/dbconfig.php'; // Pfad zur Datenbankkonfigurationsdatei anpassen
 
-// Überprüfen, ob das Formular abgesendet wurde
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Überprüfen, ob das Formular abgesendet wurde
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sicherstellen, dass die benötigten POST-Variablen existieren
     if(isset($_POST['name']) && isset($_POST['nachricht'])) {
         // Erstellen der Datenbankverbindung
@@ -19,33 +19,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nachricht = trim($_POST['nachricht']);
 
         // SQL-Statement vorbereiten, um SQL-Injection zu verhindern
-        $stmt = $conn->prepare("INSERT INTO gaestebuch (name, nachricht) VALUES (?, ?)");
-        $stmt->bind_param("ss", $name, $nachricht);
+		$stmt = $conn->prepare("INSERT INTO gaestebuch (name, nachricht, approved) VALUES (?, ?, FALSE)");
+		$stmt->bind_param("ss", $name, $nachricht);
+
 
         // Versuchen, den Eintrag in die Datenbank einzufügen
         if ($stmt->execute()) {
             $stmt->close();
             $conn->close();
-            // Weiterleitung nur, wenn der Eintrag erfolgreich war
-            header('Location: index.php?page=gaestebuch'); // Pfad anpassen, falls nötig
-            exit; // Beenden der Skriptausführung nach der Weiterleitung
+			$meldung = "Eintrag wurde erfolgreich hinzugefügt. Sobald er genehmigt wurde, wird er hier angezeigt.";
         } else {
             echo "Fehler beim Hinzufügen des Eintrags: " . $stmt->error;
             $stmt->close();
             $conn->close();
         }
+		} else {
+			echo "Name und Nachricht sind erforderlich.";
+		}
+	} else {
+		// Wenn das Skript nicht durch ein POST-Request aufgerufen wird
+		$meldung= "Ungültige Anfrage.";
+	}
 
-    } else {
-        echo "Name und Nachricht sind erforderlich.";
-    }
-} else {
-    // Wenn das Skript nicht durch ein POST-Request aufgerufen wird
-    echo "Ungültige Anfrage.";
-}
-
-// Optional: Weiterleitung zurück zum Gästebuch
-header('Location: index.php?page=gaestebuch'); // Pfad anpassen, falls nötig
-?>
+	// Optional: Weiterleitung zurück zum Gästebuch
+	header('Location: index.php?page=gaestebuch&meldung=' . $meldung); // Pfad anpassen, falls nötig
+	?>
 
 /* Dieser Code ist Teil eines PHP-Skripts, das in eintrag_hinzufuegen.php verwendet wird, um Gästebucheinträge zu verarbeiten und in eine Datenbank einzufügen. Hier ist, Schritt für Schritt, was der Code macht:
 

@@ -1,161 +1,37 @@
-	body 
-	{
-		margin: 0px;
-		background-color: #BABABA; /* Farbe des Hintergrunds */
-		position: relative;
-	}
-
- 
-	.top-nav 
-	{
-		background-color: #000000; /* Hintergrundfarbe der Navigation */
-		padding: 20px;
-		width: 100%;
-		text-align: center;
-		position: -webkit-sticky; /* Für Safari */
-		position: sticky;
-		top: 0; /* Stellt sicher, dass die Navigationsleiste am oberen Rand "klebt" */
-		z-index: 0; /* Stellt sicher, dass die Navigationsleiste über dem Streifen liegt */
-	}
-
-	.top-nav a 
-	{
-		color: #00FF00; /* Schriftfarbe der Links */
-		margin: 20px;
-		text-decoration: none;
-		font-size: 18px;
-		font-family: 'Courier New', monospace;
-	}
-
-
-/* -------------- ^ Bis hier hin plainstyle (obere schwarze Leiste, Schriftart/Farbe der Links, Hintergrundfarbe der Seite) ^ -------------- */	
-
-
-/* -------------- V Ab hier wird der style für die Kontainer in start.php definiert V -------------- */
-
-	.start h1 
-	{
-		font-family: 'Lucida Console', monospace;
-		font-size: 50px;
-		margin: 0;
-		padding: 0;
-		line-height: 1.2;
-	}
-
-
-	.start p 
-	{
-		color: #000000; /* Schriftfarbe */
-		font-family: 'Lucida Console', monospace; /* Schriftart */
-		line-height: 1.4;
-	}
-
-
-	.start p:nth-of-type(1) 
-	{
-		font-size: 20px;
-		margin: 0;
-		padding: 20px 0;
-	}
-
-
-	.start p:nth-of-type(2) 
-	{
-		font-size: 30px;
-		margin: 0;
-		padding: 20px 0;
-		line-height: 1.2;
-	}
-
-
-	.start p:nth-of-type(3) 
-	{
-		font-size: 15px;
-		margin: 0;
-		padding: 20px 0;
-	}
-
-
-	.start p:nth-of-type(4) 
-	{
-		font-size: 20px;
-		margin: 0;
-		padding: 20px 0;
-	}
-	
-	
-	/* .start p:nth-of-type(5) 
-	{
-		font-size: 15px;
-		margin: 0;
-		padding: 350px 0;
-	} */
-	
-	
-	.start-container.welcome-section 
-	{
-    text-align: center;
-    margin-top: 100px;
-	}
-	
-	
-/* -------------- ^ Bis hier hin noch Style start.php ^ -------------- */
-
-
-/* -------------- V Ab hier wird der style für timer.php definiert V -------------- */
-
-
-	.timer 
-	{
+	.timer {
 		text-align: center; /* Übernommen vom äußeren div */
 		margin-top: 40px; /* Spezifischer Abstand nach oben für das äußere div */
 		font-family: 'Lucida Console', monospace; /* Gemeinsamer Schriftstil */
 		line-height: 1.4; /* Gemeinsamer Zeilenabstand */
 	}
 
-
-	.timer h1 
-	{
+	.timer h1 {
 		margin: 0;
 		padding-top: 20px; /* Spezifischer Abstand oben für h1 */
 		font-size: 50px; /* Schriftgröße für h1 */
 		/* line-height für h1 ist durch .timer geerbt */
 	}
 
-
-	.timer p 
-	{
+	.timer p {
 		margin: 50px 0; /* Spezifischer Abstand oben und unten für p */
 		font-size: 20px; /* Schriftgröße für p */
 		line-height: 1.6; /* Spezifischer Zeilenabstand für p */
 		/* font-family für p ist durch .timer geerbt */
 	}
 
-
-	.timer .date-time 
-	{
+	.timer .date-time {
 		font-size: 30px; /* Schriftgröße für Datum und Uhrzeit */
 		/* line-height für Datum und Uhrzeit ist durch .timer geerbt */
 	}
 
-
-	.timer .countdown 
-	{
+	.timer .countdown {
 		font-size: 40px; /* Schriftgröße für Countdown */
 		color: #DC143C; /* Schriftfarbe für Countdown */
 		margin: 20px 0; /* Spezifischer Abstand oben und unten für Countdown */
 		/* line-height für Countdown ist durch .timer geerbt */
 	}
-
-
-/* -------------- ^ Bis hier hin noch Style timer.php ^ -------------- */
-
-
-/* -------------- V Ab hier wird der style für It-Humor definiert V -------------- */
 	
-	
-	.galerie 
-	{
+	.galerie {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		grid-gap: 10px; /* Abstand zwischen den Kacheln */
@@ -163,9 +39,7 @@
 		margin: 20px;
 	}
 
-	/* Galerie-Bilder */
-	.gallery-image 
-	{
+	.gallery-image {
 		width: 100%; /* Anpassung nach Bedarf */
 		max-width: 200px; /* Maximale Breite jedes Bildes in der Galerie */
 		height: 200px; /* Höhe automatisch anpassen */
@@ -175,12 +49,10 @@
 		object-fit: cover;
 	}
 
-	.gallery-image:hover 
-	{
+	.gallery-image:hover {
 		transform: scale(1.05); /* Vergrößern beim Darüberfahren */
 	}
 
-	/* Modal-Stil für Bildvorschau */
 	.modal {
 		display: none; /* Standardmäßig versteckt */
 		position: fixed; /* Fixiert im Blickfeld */
@@ -194,9 +66,7 @@
 		background-color: rgba(0,0,0,0.9); /* Schwarz, leicht transparent */
 	}
 
-	/* Stil des Bildes im Modal */
-	.modal-content 
-	{
+	.modal-content {
 		margin: auto;
 		display: block;
 		width: 80%; /* Anpassung nach Bedarf */
@@ -206,11 +76,7 @@
 		object-fit: contain; /* Stellt sicher, dass das Bild seine Proportionen behält, ohne abgeschnitten zu werden */
 	}
 
-	}
-
-	/* Schließen-Button */
-	.close 
-	{
+	.close {
 		position: absolute;
 		top: 15px;
 		right: 35px;
@@ -220,9 +86,7 @@
 		cursor: pointer;
 	}
 
-	/* Navigationspfeile */
-	.prev, .next 
-	{
+	.prev, .next {
 		cursor: pointer;
 		position: absolute;
 		top: 50%;
@@ -237,26 +101,16 @@
 		user-select: none; /* Verhindert das Auswählen des Textes */
 	}
 
-	/* Positioniert den "Nächste"-Button rechts */
 	.next {
 		right: 0;
 		border-radius: 3px 0 0 3px;
 	}
 
-	/* Fügt beim Darüberfahren einen Hintergrund hinzu */
 	.prev:hover, .next:hover {
 		background-color: rgba(0,0,0,0.8);
 	}
 
-
-/* -------------- ^ Bis hier hin wird der style für It-Humor definiert ^ -------------- */
-
-
-/* -------------- V Ab hier wird der style für gaestebuch.php definiert V -------------- */
-
-
-	.gaestebuch 
-	{
+	.gaestebuch {
 		margin-top: 25px; /* Abstand zum oberen Rand */
 		margin-left: 25px; /* Abstand zum linken Rand */
 		color: black; /* Schriftfarbe */
@@ -264,15 +118,7 @@
 		font-size: 23px; /* Schriftgröße */
 	}
 
-
-/* -------------- ^ Bis hier hin wird der style für Gästebuch definiert ^ -------------- */
-
-
-/* -------------- V Ab hier wird der style für Upload definiert V -------------- */
-
-
-	.upload 
-	{
+	.upload {
 		margin: 20px auto;
 		padding: 20px;
 		font-family: 'Lucida Console', monospace;
@@ -283,14 +129,12 @@
 		text-align: center; /* Zentrierter Text */
 	}
 
-	.upload input[type="file"] 
-	{
+	.upload input[type="file"] {
 		margin: 10px 0; /* Abstand oben und unten */
 		font-family: 'Lucida Console', monospace;
 	}
 
-	.upload input[type="submit"] 
-	{
+	.upload input[type="submit"] {
 		background-color: #007bff; /* Blauer Hintergrund */
 		font-family: 'Lucida Console', monospace;
 		color: white; /* Weißer Text */
@@ -300,15 +144,12 @@
 		cursor: pointer; /* Cursor als Zeiger */
 	}
 
-	.upload input[type="submit"]:hover 
-	{
+	.upload input[type="submit"]:hover {
 		background-color: #0056b3; /* Dunklerer Blauton beim Hover */
 		font-family: 'Lucida Console', monospace;
 	}
 
-
-	@media (max-width: 600px) 
-	{
+	@media (max-width: 600px) {
 		.galerie {
 			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		}
@@ -318,23 +159,18 @@
 		}
 	}
 
-
-	@media (max-width: 600px) 
-	{
+	@media (max-width: 600px) {
 		body {
 			font-size: 16px; /* Erhöhen Sie die Schriftgröße für bessere Lesbarkeit */
 		}
 	}
-	
-	
-	@media (max-width: 600px) 
-	{
+		
+	@media (max-width: 600px) {
     .modal-content {
         max-height: 90%; /* Erlaubt dem Bild, mehr Platz einzunehmen, da die Bildschirmhöhe begrenzter ist */
         max-width: 95%; /* Nutzt mehr von der Bildschirmbreite aus */
     }
 }
-
 
 	#besucherzaehler-container {
 		position: fixed; /* Position fixiert relativ zum Viewport */
@@ -354,6 +190,15 @@
 		display: inline-block; /* Ermöglicht das Zentrieren mit text-align im Elternelement */
 		border-radius: 5px; /* Runde Ecken */
 	}
+	
+	.converter-section {
+    font-family: 'Courier New', monospace;
+	}
+
+	.converter-section input, .converter-section button, .converter-section form {
+		font-family: 'Courier New', monospace;
+	}
+
 
 
 

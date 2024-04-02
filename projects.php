@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte</title>
-    <link rel="stylesheet" href="css/style.css">	
+    <title>Projektübersicht</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
 </head>
 <body>
 
-<?php
-	echo '<div class="welcome-section" style="text-align: center; margin-top: 200px;">'; 
-	echo '<h1 style="font-size: 80px; margin: 0; padding: 0; font-family: Arial;">¯\_(ツ)_/¯</h1>'; 
-	echo '<p style="font-size: 25px; margin: 0; padding: 20px 0; font-family: Arial;">Hier gibt es noch nix zu sehen</p>';
-	echo '</div>';
-?>
+<?php include 'navi.php'; ?>
 
+    <h1>Willkommen zu meinen Projekten!</h1>
+    <p>Entdecke verschiedene Projekte und Experimente, die ich im Laufe der Zeit erstellt habe.</p>
+
+    <ul>
+        <li><a href="umrechner.php">Umrechner</a> - Konvertiere verschiedene Maßeinheiten und Währungen.</li>
+        <!-- Weitere Projekte hier als Listenelemente hinzufügen -->
+    </ul>
 </body>
-</html>

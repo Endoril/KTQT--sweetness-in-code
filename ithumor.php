@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT-Humor</title>
     <link rel="stylesheet" href="css/style.css">
-	<style>
+    <link rel="stylesheet" href="css/navigation.css">
+	<style>	
 		body 
 		{
 			background-color: #333; /* Farbe des Hintergrunds geändert */
@@ -14,6 +15,9 @@
 	</style>	
 </head>
 <body>
+
+<?php include 'navi.php'; ?>
+
     <div class="galerie">
     
 <?php
@@ -32,8 +36,7 @@
 	foreach ($bilder as $bild) {
 		// Erzeugt den korrekten relativen Pfad für jedes Bild
 		$bildpfad = $verzeichnis . '/' . basename($bild);
-		echo '<img src="'.$bildpfad.'" alt="Bild" class="gallery-image" onclick="openPreview(\''.$bildpfad.'\')">';
-		
+		echo '<img src="'.$bildpfad.'" alt="Bild" class="gallery-image" onclick="openPreview(\''.$bildpfad.'\')">';		
 	}
 ?>
 	</div>	
