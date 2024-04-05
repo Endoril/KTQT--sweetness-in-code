@@ -1,0 +1,49 @@
+	.upload {
+		margin: 20px auto;
+		padding: 20px;
+		font-family: 'Lucida Console', monospace;
+		background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+		border: 1px solid #ddd; /* Grauer Rand */
+		border-radius: 8px; /* Abgerundete Ecken */
+		max-width: 400px; /* Maximale Breite */
+		text-align: center; /* Zentrierter Text */
+	}
+
+	.upload input[type="file"] {
+		margin: 10px 0; /* Abstand oben und unten */
+		font-family: 'Lucida Console', monospace;
+	}
+
+	.upload input[type="submit"] {
+		background-color: #007bff; /* Blauer Hintergrund */
+		font-family: 'Lucida Console', monospace;
+		color: white; /* Weißer Text */
+		padding: 10px 20px; /* Polsterung */
+		border: none; /* Kein Rand */
+		border-radius: 5px; /* Leicht abgerundete Ecken */
+		cursor: pointer; /* Cursor als Zeiger */
+	}
+
+	.upload input[type="submit"]:hover {
+		background-color: #0056b3; /* Dunklerer Blauton beim Hover */
+		font-family: 'Lucida Console', monospace;
+	}
+
+	#besucherzaehler-container {
+		position: fixed; /* Position fixiert relativ zum Viewport */
+		left: 0; /* Linken Rand auf 0 setzen */
+		right: 0; /* Rechten Rand auf 0 setzen */
+		bottom: 10px; /* Abstand vom unteren Rand des Bildschirms */
+		text-align: center; /* Zentriert den Inhalt */
+		z-index: 1000; /* Stellt sicher, dass der Container über anderen Elementen liegt */
+	}
+
+	#besucherzaehler-container p {
+		margin: 0; /* Entfernt den Standard-Abstand */
+		padding: 5px; /* Etwas Innenabstand */
+		background: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe mit etwas Transparenz */
+		color: white; /* Textfarbe */
+		font-family: 'Lucida Console', monospace;
+		display: inline-block; /* Ermöglicht das Zentrieren mit text-align im Elternelement */
+		border-radius: 5px; /* Runde Ecken */
+	}

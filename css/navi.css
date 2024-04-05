@@ -1,0 +1,48 @@
+	@font-face {
+	  font-family: 'Press Start 2P'; /* Name der Schriftart */
+	  src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+	
+		@font-face {
+	  font-family: 'Ubuntu-Regular'; /* Name der Schriftart */
+	  src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	/* Allgemeine Körper-Stile */
+	body {
+		margin: 0px;
+		background-color: #BABABA; /* Farbe des Hintergrunds */
+		position: relative;
+	}
+
+	/* Stile für die Navigationsleiste */
+	.top-nav {
+		background-color: #000000; /* Hintergrundfarbe der Navigation */
+		padding: 20px;
+		width: 100%;
+		margin-bottom: 60px; /* Fügt einen unteren Rand hinzu */
+		text-align: center;
+		position: -webkit-sticky; /* Für Safari */
+		position: sticky;
+		top: 0; /* Stellt sicher, dass die Navigationsleiste am oberen Rand "klebt" */
+		z-index: 100; /* Stellt sicher, dass die Navigationsleiste über anderen Elementen liegt */
+	}
+
+	/* Stile für Links in der Navigationsleiste */
+	.top-nav a {
+		color: #00FF00; /* Farbe der Links */
+		font-family: 'Courier New', Courier, monospace; /*Schriftart der Links*/
+		/*font-weight: bold;*/
+		font-size: 20px; /* Schriftgröße der Links */
+		text-decoration: none; /* Entfernt die Unterstreichung von Links */
+		padding: 0 15px; /* Abstand um die Links */
+	}
+
+	.top-nav a:hover {
+		color: #CCCCCC; /* Farbe der Links beim Hover */
+		text-decoration: underline; /* Fügt eine Unterstreichung beim Hover hinzu */
+	}

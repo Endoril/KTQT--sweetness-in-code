@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Grundlegender Stil für den Container */
+.welcome-container {
+    font-family: 'Ubuntu-Regular', monospace;
+    text-align: center; /* Zentriert den Text aller Kinder */
+}
+
+/* Stil für Überschriften innerhalb des Containers */
+.welcome-container h1 {
+    font-size: 30px; /* Beispielgröße für Überschriften */
+}
+
+/* Stil für den Tagline-Text */
+.welcome-container .tagline {
+    font-size: 20px; /* Größere Schrift für den Tagline */
+    color: #555; /* Dunkelgrau für Kontrast */
+}
+
+/* Stil für einführenden Text */
+.welcome-container .intro {
+    font-size: 30px; /* Mittlere Größe für einführenden Text */
+}
+
+/* Stil für Einladungstext */
+.welcome-container .invite {
+    font-size: 16px; /* Kleinere Größe, identisch mit einführenden Texten für Konsistenz */
+}
+
+/* Zentriert den Button und den Beschreibungstext innerhalb der project-area */
+.project-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Elemente horizontal */
+    gap: 20px; /* Fügt Abstand zwischen Button und Beschreibungstext hinzu */
+    margin: 50px 100px; /* Angepasster Platz oben und unten */
+}
+
+.project-button {
+    padding: 20px 40px;
+    background-color: #000080;
+    color: white;
+    text-decoration: none;
+    font-family: 'Lucida Console', monospace;
+    font-size: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+	margin: 50px 0px; /* Angepasster Platz oben und unten */
+}
+
+.project-button:hover {
+    background-color: #0000ff; /* Leicht helleres Blau für den Hover-Zustand */
+}
+
+.project-description {
+    max-width: 50%; /* Begrenzt die Breite des Beschreibungstexts */
+    font-family: 'Lucida Console', monospace;
+    font-size: 16px;
+    color: #333; /* Dunkler Text für bessere Lesbarkeit */
+	margin: -30px 0px; /* Angepasster Platz oben und unten */
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-container h1,
+    .welcome-container .tagline,
+    .welcome-container .intro,
+    .welcome-container .invite {
+        font-size: 18px; /* Einheitliche Anpassung für kleinere Bildschirme */
+    }
+
+    .project-area {
+        margin: 15px 0; /* Reduzierter Platz oben und unten */
+    }
+
+    .project-button {
+        padding: 15px 30px; /* Etwas kleineres Padding */
+        font-size: 18px; /* Anpassung der Schriftgröße */
+    }
+
+    .project-description {
+        max-width: 80%; /* Nutzt mehr Platz für die Beschreibung */
+        font-size: 14px; /* Kleinere Schriftgröße */
+    }
+}

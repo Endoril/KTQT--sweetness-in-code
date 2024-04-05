@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projektübersicht</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navigation.css">
-</head>
-<body>
-
-<?php include 'navi.php'; ?>
-
+<div class="welcome-container">
     <h1>Willkommen zu meinen Projekten!</h1>
-    <p>Entdecke verschiedene Projekte und Experimente, die ich im Laufe der Zeit erstellt habe.</p>
+    <p class="tagline">sweetness in code ...</p>
+    <p class="intro">Entdecke Experimente</p>
+    <p class="intro">und Ideen, die von mir zum Leben erweckt wurden.</p>
+    <p class="invite">Tauche ein in die süße Welt des Codes!</p>
+</div>
 
-    <ul>
-        <li><a href="umrechner.php">Umrechner</a> - Konvertiere verschiedene Maßeinheiten und Währungen.</li>
-        <!-- Weitere Projekte hier als Listenelemente hinzufügen -->
-    </ul>
-</body>
+<div class="project-area">
+    <a href="index.php?page=umrechner" class="project-button">Umrechner</a>
+    <p class="project-description">Dein Ticket durch Raum und Zeit! Ideal für Zeitreisende, Dimensionsspringer und die, die im Mathematikunterricht lieber geschlafen haben. Finde deinen Weg - egal ob in dieser Galaxie oder in einer, weit, weit entfernt...</p>
+    <a href="index.php?page=aim" class="project-button">K.T.Q.T.</a>
+    <p class="project-description">Was verbirgt sich hier?</p>
+</div>
+

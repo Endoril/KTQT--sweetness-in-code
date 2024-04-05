@@ -1,0 +1,32 @@
+	.timer {
+		text-align: center; /* Übernommen vom äußeren div */
+		margin-top: 40px; /* Spezifischer Abstand nach oben für das äußere div */
+		font-family: 'Lucida Console', monospace; /* Gemeinsamer Schriftstil */
+		line-height: 1.4; /* Gemeinsamer Zeilenabstand */
+	}
+
+	.timer h1 {
+		margin: 0;
+		padding-top: 20px; /* Spezifischer Abstand oben für h1 */
+		font-size: 50px; /* Schriftgröße für h1 */
+		/* line-height für h1 ist durch .timer geerbt */
+	}
+
+	.timer p {
+		margin: 50px 0; /* Spezifischer Abstand oben und unten für p */
+		font-size: 20px; /* Schriftgröße für p */
+		line-height: 1.6; /* Spezifischer Zeilenabstand für p */
+		/* font-family für p ist durch .timer geerbt */
+	}
+
+	.timer .date-time {
+		font-size: 30px; /* Schriftgröße für Datum und Uhrzeit */
+		/* line-height für Datum und Uhrzeit ist durch .timer geerbt */
+	}
+
+	.timer .countdown {
+		font-size: 40px; /* Schriftgröße für Countdown */
+		color: #DC143C; /* Schriftfarbe für Countdown */
+		margin: 20px 0; /* Spezifischer Abstand oben und unten für Countdown */
+		/* line-height für Countdown ist durch .timer geerbt */
+	}

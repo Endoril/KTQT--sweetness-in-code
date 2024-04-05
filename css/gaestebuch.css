@@ -1,0 +1,7 @@
+	.gaestebuch {
+		margin-top: 25px; /* Abstand zum oberen Rand */
+		margin-left: 25px; /* Abstand zum linken Rand */
+		color: black; /* Schriftfarbe */
+		font-family: 'Lucida Console', monospace; /* Schriftart*/
+		font-size: 23px; /* Schriftgröße */
+	}

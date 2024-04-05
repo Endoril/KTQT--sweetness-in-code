@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.start-content {
+    text-align: center;
+    font-family: 'Ubuntu-Regular', monospace;
+}
+
+.start-content h1 {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.start-content .sweetness, .start-content .tauche {
+    color: #000;
+    line-height: 1.4;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.start-content .entdecke {
+    color: #000;
+    line-height: 1.2;
+    font-size: 30px;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.start-content .projects {
+    color: #000;
+    font-size: 15px;
+    margin: 0;
+    padding: 20px 0;
+}

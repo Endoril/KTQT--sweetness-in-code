@@ -1,0 +1,46 @@
+body {
+    font-family: 'Ubuntu-Regular', monospace;
+    background-color: #c0c0c0; /* Typische graue Hintergrundfarbe */
+    color: #000000;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none; /* Keine Unterstreichung für einen saubereren Look */
+}
+
+a:hover {
+    text-decoration: underline; /* Fügt Unterstreichung beim Hover für Links hininzu */
+}
+
+input[type="submit"] {
+    background-color: #000080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0000ff;
+}
+
+input[type="number"] {
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+/* Anpassungen für den Container und die Formulare, um den Retro-Look zu vervollständigen */
+.converter-section {
+    background-color: #ffffff;
+	font-family: 'Ubuntu-Regular', monospace;
+    border: 2px solid #000000;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 3px 3px #888888; /* Fügt einen einfachen Schatten hininzu */
+}
+
+form {
+    margin: 10px 0;
+}
